@@ -25,7 +25,7 @@ public class DBDVSProperties {
 	}
 
 	public String getGameSetting(String property) {
-		return ini.get(NODE_GAME_USER_SETTINGS, "bUseVSync");
+		return ini.get(NODE_GAME_USER_SETTINGS, property);
 	}
 
 	public boolean getGameSettingBoolean(String property) {
