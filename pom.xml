@@ -32,7 +32,7 @@
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
-      <!-- Build jar with dependencies -->
+      <!-- Build jar with dependencies and MANIFEST-MF -->
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
@@ -47,6 +47,11 @@
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
+          <archive>
+		     <manifest>
+		       <mainClass>net.marfgamer.dbdvsync.DBDVSMain</mainClass>
+		     </manifest>
+		   </archive>
         </configuration>
       </plugin>
       
